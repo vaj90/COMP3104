@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "stable"
+  - "lts/*"
 
 branches:
   only:
@@ -16,8 +16,7 @@ install:
 
 script:
   #- yarn lint
-  #- yarn build
-  - npm run build
+  - yarn build
   - mv build/index.html build/404.html
 
 deploy:
